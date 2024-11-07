@@ -22,6 +22,12 @@ output "oidc_provider_arn" {
   value = module.eks.oidc_provider_arn
 }
 
+
+output "cluster_name" {
+  description = "Kubernetes Cluster Name"
+  value       = module.eks.cluster_name
+}
+
 #output "zz_update_kubeconfig_command" {
   # value = "aws eks update-kubeconfig --name " + module.eks.cluster_id
 #  value = format("%s %s %s %s", "aws eks update-kubeconfig --name", module.eks.cluster_id, "--region", var.aws_region)
