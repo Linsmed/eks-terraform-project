@@ -7,3 +7,14 @@ on:
     branches:
       - main
   workflow_dispatch:
+
+name: Deployment
+
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    environment: production
+    concurrency: production
+    steps:
+      - name: deploy
+        # ...deployment-specific steps
